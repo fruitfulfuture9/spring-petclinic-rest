@@ -66,7 +66,7 @@ public class Owner extends Person {
     @Digits(fraction = 0, integer = 10)
     private String telephone;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", fetch = FetchType.EAGER)
+    @OneToMany( mappedBy = "owner", fetch = FetchType.LAZY)//cascade = CascadeType.ALL, fetch = FetchType.EAGER
     private Set<Pet> pets;
 
 
